@@ -1,0 +1,12 @@
+[project]
+name = "advanced-mcp"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "dotenv>=0.9.9",
+    "fastmcp>=2.11.1",
+    "sqlalchemy>=2.0.42",
+    "stytch>=13.12.0",
+]
