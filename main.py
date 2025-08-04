@@ -25,7 +25,7 @@ auth = BearerAuthProvider(
     audience=os.getenv("STYTCH_PROJECT_ID")
 )
 
-mcp = FastMCP(name="Notes APP", auth=None)
+mcp = FastMCP(name="Notes APP", auth=auth)
 
 @mcp.tool()
 def get_my_notes(_ctx) -> str:
