@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "myLocalMcp": {
+      "httpUrl": "https://275eefc8ece3.ngrok-free.app/mcp",
+      "timeout": 5000
+    }
+  }
+}

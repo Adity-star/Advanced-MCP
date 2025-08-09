@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div>
-        {!user ? <StytchLogin config={config}/> : <IdentityProvider />}
+        {!user ? <StytchLogin config={config}/> : <IdentityProvider mcp_api_url="http://127.0.0.1:8000" />}
     </div>
   )
 }

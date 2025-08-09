@@ -4,7 +4,7 @@ from starlette.middleware.cors import CORSMiddleware
 from starlette.middleware import Middleware
 from starlette.requests import Request as StarletteRequest
 from starlette.responses import JSONResponse
-from fastmcp.server.auth import BearerAuthProvider
+from fastmcp.server.auth import AccessToken, BearerAuthProvider
 from urllib.parse import urljoin
 from fastmcp.server.dependencies import get_access_token
 from database import NoteRepository
@@ -27,9 +27,10 @@ auth = BearerAuthProvider(
     issuer=stytch_domain,
     algorithm="RS256",
     audience=os.getenv("STYTCH_PROJECT_ID")
+    
 )
 
-mcp = FastMCP(name="Notes APP", auth=auth)
+mcp = FastMCP(name="Notes APP",auth=auth)
 
 @mcp.tool()
 def get_my_notes() -> str:
